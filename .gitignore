@@ -1,3 +1,11 @@
-.env
 .fleet/
+*.log
 .fleet-deploy.log
+
+# --- Consul ---
+# a local `consul agent -data-dir=data` writes here
+data/
+# gossip keys, ACL tokens and TLS material never belong in git
+*.pem
+*.key
+*-token.hcl
